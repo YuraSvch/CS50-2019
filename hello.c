@@ -12,9 +12,6 @@ int main() {
         }
 
         printf("hello, %s\n", username);
-    } else {
-        printf("Failed to read input.\n");
-    }
-
+    } 
     return 0;
 }
