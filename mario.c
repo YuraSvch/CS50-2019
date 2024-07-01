@@ -4,19 +4,22 @@
 int main() {
     int height;
 
+    // Запитуємо висоту, поки не отримаємо правильне значення
     do {
-        height = get_int("Height: ");
-    } while (height < 1 || height > 8);
+        height = get_int("Height: "); //Запитуємо висоту у користувача
+    } while (height < 1 || height > 8); // Повторюємо, якщо висота не в діапазоні від 1 до 8
 
-    for (int i = 1; i <= height; i++) {
-        for (int j = 0; j < height - i; j++) {
+    // Генерація піраміди
+    for (int i = 1; i <= height; i++) { // Повторення кожного рівня піраміди 
+        for (int j = 0; j < height - i; j++) { // Зменшення пробілів на кожному рівні
             printf(" ");
         }
-        for (int k = 0; k < i; k++) {
+        for (int k = 0; k < i; k++) { // Збільшення хешів на кожному рівні
             printf("#");
         }
-        printf("\n");
+        printf("\n"); // Перехід на новий рядок після кожного рівня піраміди
     }
 
     return 0;
 }
+
